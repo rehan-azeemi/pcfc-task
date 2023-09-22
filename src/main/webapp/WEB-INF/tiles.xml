@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+    <definition name="home" template="/WEB-INF/views/home.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+        <put-attribute name="error" value="/WEB-INF/views/common/error.jsp" />
+    </definition>
+    <definition name="addEmployee" template="/WEB-INF/views/addEmployee.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+        <put-attribute name="commonForm" value="/WEB-INF/views/common/commonForm.jsp" />
+        <put-attribute name="error" value="/WEB-INF/views/common/error.jsp" />
+    </definition>
+    <definition name="editEmployee" template="/WEB-INF/views/editEmployee.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+        <put-attribute name="commonForm" value="/WEB-INF/views/common/commonForm.jsp" />
+    </definition>
+    <definition name="listingEmployee" template="/WEB-INF/views/listingEmployee.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+    </definition>
+    <definition name="viewEmployee" template="/WEB-INF/views/viewEmployee.jsp">
+        <put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+    </definition>
+</tiles-definitions>
