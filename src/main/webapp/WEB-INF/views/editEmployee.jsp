@@ -9,41 +9,6 @@
             <form:form action="/update/employee" method="post" modelAttribute="employee">
                 <form:hidden path="id" name="id"/>
                 <tiles:insertAttribute name="commonForm" ignore="true" />
-                <div class="form-group row">
-                    <label for="department" class="col-sm-2 col-form-label">Department</label>
-                    <div class="col-sm-7">
-                        <form:select path="department" class="form-control" name="department" placeholder="Select Department">
-                            <c:forEach items="${departments}" var="dept">
-                                    <c:choose>
-                                        <c:when test="${dept.id eq employee.department.id}">
-                                            <Option selected value="${dept.id}">${dept.departmentName}</Option>
-                                        </c:when>
-                                        <c:otherwise>
-                                            <Option value="${dept.id}">${dept.departmentName}</Option>
-                                        </c:otherwise>
-                                    </c:choose>
-                            </c:forEach>
-                        </form:select>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="manager" class="col-sm-2 col-form-label">Manager</label>
-                    <div class="col-sm-7">
-                        <form:select path="manager" class="form-control" name="manager" placeholder="Select Manager">
-                            <Option></Option>
-                            <c:forEach items="${employees}" var="emp">
-                                <c:choose>
-                                    <c:when test="${not empty employee.manager && emp.id eq employee.manager.id}">
-                                        <Option selected value="${emp.id}">${emp.firstName}</Option>
-                                    </c:when>
-                                    <c:otherwise>
-                                        <Option value="${emp.id}">${emp.firstName}</Option>
-                                    </c:otherwise>
-                                </c:choose>
-                            </c:forEach>
-                        </form:select>
-                    </div>
-                </div>
                 <button type="submit" class="btn btn-primary">Update</button>
             </form:form>
         </div>

@@ -11,27 +11,6 @@
             </c:if>
             <form:form action="/save/employee" method="post" modelAttribute="employee">
                 <tiles:insertAttribute name="commonForm" ignore="true" />
-                <div class="form-group row">
-                    <label for="department" class="col-sm-2 col-form-label">Department</label>
-                    <div class="col-sm-7">
-                        <form:select path="department" class="form-control" name="department" placeholder="Select Department">
-                            <c:forEach items="${departments}" var="department">
-                                <Option value="${department.id}">${department.departmentName}</Option>
-                            </c:forEach>
-                        </form:select>
-                    </div>
-                </div>
-                <div class="form-group row">
-                    <label for="manager" class="col-sm-2 col-form-label">Manager</label>
-                    <div class="col-sm-7">
-                        <form:select path="manager" class="form-control" name="manager" placeholder="Select Manager">
-                            <Option></Option>
-                            <c:forEach items="${employees}" var="emp">
-                                <Option value="${emp.id}">${emp.firstName}</Option>
-                            </c:forEach>
-                        </form:select>
-                    </div>
-                </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form:form>
         </div>
